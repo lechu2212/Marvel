@@ -1,0 +1,1294 @@
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+	background: transparent;
+	font-weight: normal;
+	text-decoration: none;
+	outline: none;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	transition: 0.3s ease-in-out;
+	box-sizing: border-box;
+}
+ol, ul {
+	list-style: none;
+}
+del {
+	text-decoration: line-through;
+}
+body {
+	font-family: "GT-Eesti", Arial, Helvetica, sans-serif;
+	font-size: 17px;
+	color: #000;
+	background: var(--primary-color);
+	overflow-x: hidden;
+	min-width: 320px;
+	font-weight: 500;
+}
+input,textarea,select{
+	font-family: "GT-Eesti", Arial, Helvetica, sans-serif;
+	font-weight: 500;
+}
+.wrapper {
+	width: 90%;
+	margin: 0 auto;
+	max-width: 1280px;
+}
+a {
+	display: inline-block;
+}
+.flex-wrapper {
+	display: flex;
+	justify-content: space-between;
+}
+:root {
+	--primary-color: #fff;
+	--secondary-color: #000 ;
+	--btn-color: #f8c145 ;
+	--text-color: #474559;
+}
+.dark-theme {
+	--primary-color: #000;
+	--secondary-color: #fff ;
+}
+header { 
+    height: 100px;
+	padding: 20px 0;
+
+}
+header .wrapper{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+header div.left { 
+	
+}
+header div.left a {
+	display: flex;
+	align-items: flex-end;
+	color: var(--secondary-color);
+}
+header div.left a:hover {
+    color: var(--btn-color);
+    transition-duration: .3s;
+}
+header div.left a i { 
+	font-size: 40px;
+}
+header div.left a h1 { 
+	font-size: 22px;
+	font-weight: bolder;
+	margin-left: 10px;
+}
+header nav.middle { 
+
+}
+header nav.middle  ul { 
+    display: flex;
+	align-items: center;
+}
+header nav.middle ul li { 
+	margin-right: 24px;
+	overflow: hidden;
+}
+header nav.middle ul li:last-child{
+	margin-right: 0;
+}
+header nav.middle  ul li a::before {
+    content:"About";
+    font-size: 16px;
+	color:var(--btn-color);
+	font-weight: 600;
+    position: absolute;
+    bottom: -20px;
+}
+header nav.middle ul li:nth-child(2) a::before {
+    content:"Projects";
+    font-size: 16px;
+	color:var(--btn-color);
+	font-weight: 600;
+    position: absolute;
+    bottom: -20px;
+}
+header nav.middle  ul li:nth-child(3) a::before {
+    content:"Resume";
+    font-size: 16px;
+	color:var(--btn-color);
+	font-weight: 600;
+    position: absolute;
+    bottom: -20px;
+}
+header nav.middle  ul li:nth-child(4) a::before {
+    content:"Contact";
+    font-size: 16px;
+	color:var(--btn-color);
+	font-weight: 600;
+    position: absolute;
+    bottom: -20px;
+}
+header nav.middle  ul li a { 
+	font-size: 16px;
+	color: var(--text-color);
+	font-weight: 600;
+	transition: 0.3s ease-in-out;
+    position: relative;
+    display: inline-block;
+}
+header nav.middle  ul li a:hover {
+    transform: translateY(-20px);
+}
+header div.right {
+
+}
+header div.right a.button { 
+	color: var(--secondary-color);
+	display: flex;
+	align-items: center;
+}
+header div.right a.button i.bx-moon {
+	font-size: 30px;
+}
+header div.right a.button i.bx-moon.active { 
+	font-size: 26px;
+	font-weight: 600;
+	display: none;
+}
+header div.right a.button i.bx-sun {
+	display: none;
+	font-size: 30px
+}
+header div.right a.button i.bx-sun.active {
+	font-weight: 600;
+	display: block;
+}
+header div.right a.button h1 { 
+	font-size: 16px;
+	font-weight: 700;
+	margin-left: 6px;
+}
+header div.right  a.menu-icon { 
+	display: none;
+	font-size: 0px;
+}
+header div.right  a.menu-icon i {
+	font-size: 40px;
+}
+header div.right div.content {
+	display: none;
+	position: absolute;
+	left: -100%;
+	transition: .5s ease-in-out;
+}
+header div.right div.content nav.mobile-menu {
+	display: none;
+}
+header div.right span.close {
+	display: none;
+}
+header div.right span.close i.bx-plus {
+	transform: rotate(45deg);
+	font-size: 30px;
+}
+#spotlight { 
+	padding: 20px 0;
+}
+#spotlight section.wrapper { 
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+#spotlight section.wrapper div.left { 
+	width: 50%;
+}
+#spotlight section.wrapper div.left h2 { 
+	font-size: 14px;
+	color: var(--text-color);
+	font-weight: 600;
+	padding: 24px;
+}
+#spotlight section.wrapper div.heading div.left h1 {
+
+}
+#spotlight section.wrapper div.left h1 { 
+	font-size: 40px;
+	font-weight: 900;
+	color: var(--secondary-color);
+	margin-bottom: 24px;
+}
+#spotlight section.wrapper div.left h1 span::before{ 
+	content: "";
+	animation: animate infinite 8s;
+	color: var(--btn-color);
+	font-weight: 700;
+}
+@keyframes animate {
+    0% {
+        content: "";
+		opacity: 1;
+		transition: .3s ease-in-out;
+    }
+	25% {
+        content: "Marvel Sann";
+		opacity: 1;
+		transition: .3s ease-in-out;
+    }
+	45% {
+        content: "";
+		opacity: 0;
+		transition: .3s ease-in-out;
+    }
+	55% {
+		content: "Web Designer";
+		opacity: 1;
+		transition: .3s ease-in-out;
+	}
+	75% {
+		content: "";
+		opacity: 0;
+		transition: .3s ease-in-out;
+	}
+	85% {
+		content: "UI Specialist";
+		opacity: 1;
+		transition: .3s ease-in-out;
+	}
+	100% {
+		content: "";
+		opacity: 0;
+		transition: .3s ease-in-out;
+	}
+}
+#spotlight section.wrapper div.left p { 
+	font-size: 16px;
+	color: var(--text-color);
+	line-height: 1.5;
+	width: 100%;
+	margin-bottom: 30px;
+}
+#spotlight section.wrapper div.left div.bottom { 
+
+}
+#spotlight section.wrapper div.left div.bottom a.button1 { 
+	background: #eeeeee;
+	color:var(--text-color);
+	padding: 12px 24px;
+	border-radius: 25px;
+	font-size: 16px;
+}
+#spotlight section.wrapper div.left div.bottom a.button1:hover {
+	color: var(--btn-color);
+	transition: .3s ease-in-out;
+}
+#spotlight section.wrapper div.left div.bottom a.button1 i { 
+	margin-right: 8px;
+}
+#spotlight section.wrapper div.left div.bottom a.button2 { 
+	background: var(--text-color);
+	color: #eeeeee;
+	padding: 12px 24px;
+	border-radius: 25px;
+	font-size: 16px;
+	margin-left: 12px;
+}
+#spotlight section.wrapper div.left div.bottom a.button2:hover {
+	background: var(--btn-color);
+}
+#spotlight section.wrapper div.right { 
+	width: 50%;
+	
+}
+#spotlight section.wrapper div.right div.img-container { 
+	width: 80%;
+	margin-left: 80px;
+	margin-top: 25px;
+}
+#spotlight section.wrapper div.right div.img-container img { 
+	display: block;
+	width: 100%;
+}
+#media { 
+	padding: 100px 0;
+}
+#media section.wrapper { 
+
+}
+#media section.wrapper h2 { 
+	text-align: center;
+	font-size: 40px;
+	width: 60%;
+	font-weight: 600;
+	margin: 0 auto 24px;
+	color: var(--secondary-color);
+}
+#media section.wrapper div.container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+#media section.wrapper div.container div.slide-container { 
+	width: 80%;
+}
+
+#media section.wrapper div.container div.slide-container img { 
+	display: block;
+	width: 100%;
+}
+#media section.wrapper div.container a i { 
+	cursor: pointer;
+	font-size: 70px;
+	color: var(--secondary-color);
+}
+#media section.wrapper div.container a i:hover {
+	color: var(--btn-color);
+}
+#media section.wrapper div.dots { 
+	text-align: center;
+}
+#media section.wrapper div.dots:nth-child(1) {
+	color: #5c5c5c ;
+}
+#media section.wrapper div.dots i {
+	cursor: pointer;
+	color: #d6d6d6;
+	font-size: 14px;
+}
+#about { 
+
+}
+#about section.wrapper { 
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;	
+}
+#about section.wrapper div.one { 
+	width: 50%;
+}
+#about section.wrapper div.one h1 { 
+	font-size: 40px;
+	font-weight: 800;
+	color:var(--secondary-color);
+	margin-bottom: 40px;
+}
+#about section.wrapper div.one div.container { 
+	display: flex;
+	align-items: flex-start;
+	margin-bottom: 70px;
+}
+#about section.wrapper div.one div.container div.left { 
+	position: relative;
+	margin-right: 24px;
+}
+#about section.wrapper div.one div.container div.left-1 {
+	margin-right: 24px;
+}
+#about section.wrapper div.one div.container div.left::before {
+	content: "";
+    position: absolute;
+    background: var(--text-color);
+    z-index: -1;
+    height: 160px;
+    width: 3px;
+    bottom: 100%;
+    left: 45%;
+}
+#about section.wrapper div.one div.container div.left p { 
+	font-size: 18px;
+	font-weight: 600;
+	background: var(--text-color);
+	color: var(--primary-color);
+	border-radius: 40px;
+	height: 80px;
+	width: 80px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#about section.wrapper div.one div.container div.left-1 p { 
+	font-size: 18px;
+	font-weight: 600;
+	background: var(--text-color);
+	color: var(--primary-color);
+	border-radius: 40px;
+	height: 80px;
+	width: 80px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#about section.wrapper div.one div.container div.right { 
+
+}
+#about section.wrapper div.one div.container div.right div.top { 
+	display: flex;
+	align-items: center;
+	margin-bottom: 16px;
+}
+#about section.wrapper div.one div.container div.right div.top h3 { 
+	font-size: 26px;
+	color: var(--text-color);
+	font-weight: 700; 
+	margin-right: 24px;
+	width: 100%;
+}
+#about section.wrapper div.one div.container div.right div.top p { 
+	font-size: 18px;
+	color: var(--text-color);
+	font-weight: 700;
+}
+#about section.wrapper div.one div.container div.right p { 
+	color: var(--text-color);
+	font-size: 18px;
+	line-height: 1.5;
+	width: 100%;
+}
+#about section.wrapper div.two { 
+	width: 50%;
+}
+#about section.wrapper div.two h1 { 
+	font-size: 40px;
+	font-weight: 800;
+	color: var(--secondary-color);
+	margin-bottom: 40px;
+}
+#about section.wrapper div.two div.container { 
+	display: flex;
+	align-items: flex-start;
+	margin-bottom: 70px;
+}
+#about section.wrapper div.two div.container div.left { 
+	position: relative;
+	margin-right: 24px;
+}
+#about section.wrapper div.two div.container div.left::before {
+	content: "";
+    position: absolute;
+    background: var(--text-color);
+    z-index: -1;
+    height: 120px;
+    width: 3px;
+    bottom: 80%;
+    left: 45%;
+}
+#about section.wrapper div.two div.container div.left-1 {
+	margin-right: 24px;
+}
+#about section.wrapper div.two div.container div.left p { 
+	font-size: 18px;
+	font-weight: 600;
+	background: var(--text-color);
+	color: var(--primary-color);
+	border-radius: 40px;
+	height: 80px;
+	width: 80px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#about section.wrapper div.two div.container div.left-1 p { 
+	font-size: 18px;
+	font-weight: 600;
+	background: var(--text-color);
+	color: var(--primary-color);
+	border-radius: 40px;
+	height: 80px;
+	width: 80px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#about section.wrapper div.two div.container div.right { 
+
+}
+#about section.wrapper div.two div.container div.right div.top { 
+	display: flex;
+	align-items: center;
+	margin-bottom: 16px;
+}
+#about section.wrapper div.two div.container div.right div.top h3 { 
+	font-size: 26px;
+	color: var(--text-color);
+	font-weight: 700; 
+	margin-right: 24px;
+	width: 100%;
+}
+#about section.wrapper div.two div.container div.right div.top p { 
+	font-size: 18px;
+	color: var(--text-color);
+	font-weight: 700;
+}
+
+#about section.wrapper div.two div.container div.right p { 
+	color: var(--text-color);
+	font-size: 18px;
+	line-height: 1.5;
+	width: 100%;
+}
+#about section.wrapper div.two div.container div.right p a {
+	color: #62abf8;
+}
+#about section.wrapper div.two div.container div.right p a:hover {
+	color: var(--btn-color);
+}
+#contact { 
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+#contact section.wrapper { 
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+#contact section.wrapper div.left { 
+	width: 50%;
+}
+#contact section.wrapper div.left iframe { 
+	width: 80%;
+	height: 300px;
+}
+
+#contact section.wrapper div.left div.container { 
+	width: 80%;
+	height: 150px;
+	background: var(--text-color);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 10% 10%;
+}
+#contact section.wrapper div.left div.container div.top { 
+	
+}
+#contact section.wrapper div.left div.container div.top h3 { 
+	color: var(--primary-color);
+	font-size: 24px;
+	font-weight: 600;
+	margin-bottom: 20px;
+}
+#contact section.wrapper div.left div.container div.top a.tele { 
+	color: var(--primary-color);
+	font-size: 16px;
+	margin-bottom: 10px;
+	display: block;
+}
+#contact section.wrapper div.left div.container div.top a.mail {
+	color: var(--primary-color);
+	font-size: 16px;
+	display: block;
+}
+#contact section.wrapper div.left div.container div.top a.mail:hover {
+	color: var(--btn-color);
+}
+#contact section.wrapper div.left div.container div.bottom { 
+
+}
+#contact section.wrapper div.left div.container div.bottom div.icon {
+	display: flex;
+	justify-content: center;
+	align-items:flex-start;
+	position: relative;
+	z-index: 2;
+}
+#contact section.wrapper div.left div.container div.bottom div.icon div.tool {
+	background: var(--secondary-color);
+	font-size: 12px;
+	color: var(--primary-color);
+	padding: 5px;
+	text-align: center;
+	border-radius: 10px;
+	position: absolute;
+	left: -70px;
+	opacity: 0;
+	pointer-events: none;
+	transition: all 0.5s linear;
+}
+#contact section.wrapper div.left div.container div.bottom div.icon:hover div.tool {
+	opacity: 1;
+	pointer-events: auto;
+}
+#contact section.wrapper div.left div.container div.bottom div.icon div.tool::after{
+	position: absolute;
+    content: "";
+    height: 6px;
+    width: 6px;
+    background: var(--secondary-color);
+    top: 9px;
+    right: -3px;
+    transform: rotate(45deg);
+    z-index: -1;
+}
+#contact section.wrapper div.left div.container div.bottom div.icon span {
+	color: var(--primary-color);
+	font-size: 20px;
+	margin-bottom: 15px; 
+	display: block;
+	position: relative;
+	z-index: 2;
+}
+#contact section.wrapper div.left div.container div.bottom div.icon span i {
+	
+}
+#contact section.wrapper div.left div.container div.bottom i:hover {
+	color: var(--btn-color);
+}
+#contact section.wrapper div.left div.container div.bottom i:last-child {
+	margin-bottom: 0;
+}
+#contact section.wrapper div.right { 
+	width: 50%;
+}
+#contact section.wrapper div.right h2 { 
+	width: 100%;
+	font-size: 40px;
+	font-weight: 700;
+	color: var(--secondary-color);
+	margin-bottom: 24px;
+}
+#contact section.wrapper div.right input[type=text] { 
+	border: 1px solid var(--text-color);
+	padding: 12px 8px;
+	width: 47%;
+	margin-right: 24px;
+}
+#contact section.wrapper div.right input[type=text]:hover {
+	border: 1px solid var(--btn-color);
+}
+#contact section.wrapper div.right input[type=email] {
+	border: 1px solid var(--text-color);
+	padding: 12px 8px;
+	width: 47%;
+}
+#contact section.wrapper div.right input[type=email]:hover {
+	border: 1px solid var(--btn-color);
+}
+#contact section.wrapper div.right textarea { 
+	border: 1px solid var(--text-color);
+	padding: 12px 8px;
+	width: 100%;
+	margin-right: 20px;
+	margin: 20px 20px 20px 0 ;
+}
+#contact section.wrapper div.right textarea:hover {
+	border: 1px solid var(--btn-color);
+}
+#contact section.wrapper div.right div.btn {
+	text-align: right;
+}
+#contact section.wrapper div.right div.btn input[type=submit] {
+	background: var(--btn-color);
+	color: #eeeeee;
+	padding: 12px 45px;
+	border-radius: 25px;
+	font-size: 16px;
+}
+#contact section.wrapper div.right input[type=submit]:hover {
+	background: var(--text-color);
+}
+footer { 
+	padding-bottom: 50px;
+}
+footer section.wrapper { 
+
+}
+footer section.wrapper p { 
+	text-align: center;
+	color: var(--text-color);
+	font-size: 14px;
+	line-height: 1.5;
+}
+footer section.wrapper p a {
+	color: #62abf8;
+}
+footer section.wrapper p a:hover {
+	color: var(--btn-color);
+}
+@media all and (max-width:1280px) {
+	#spotlight section.wrapper div.left h1 {
+		font-size: 32px;
+		font-weight: bolder;
+	}
+	#media section.wrapper h2 {
+		font-size: 40px;
+		width: 78%;
+	}
+	#about section.wrapper div.one h1 {
+		font-size: 36px;
+		font-weight:bolder;
+	}
+	#about section.wrapper div.one div.container div.left-1 p {
+		font-size: 18px;
+		height: 70px;
+		width: 70px;
+	}
+	#about section.wrapper div.one div.container div.left p {
+		font-size: 18px;
+		height: 70px;
+		width: 70px;
+	}
+	#about section.wrapper div.one div.container div.right div.top h3 {
+		font-size: 24px;
+		margin-right: 16px;
+	}
+	#about section.wrapper div.one div.container div.right div.top p {
+		font-size: 16px;
+	}
+	#about section.wrapper div.one div.container div.right p {
+		font-size: 16px;
+	}
+	#about section.wrapper div.two h1 {
+		font-size: 36px;
+		font-weight:bolder;
+	}
+	#about section.wrapper div.two div.container div.left-1 p {
+		font-size: 18px;
+		height: 70px;
+		width: 70px;
+	}
+	#about section.wrapper div.two div.container div.left p {
+		font-size: 18px;
+		height: 70px;
+		width: 70px;
+	}
+	#about section.wrapper div.two div.container div.right div.top h3 {
+		font-size: 24px;
+		margin-right: 16px;
+	}
+	#about section.wrapper div.two div.container div.right div.top p {
+		font-size: 16px;
+	}
+	#about section.wrapper div.two div.container div.right p {
+		font-size: 16px;
+	}
+	#contact section.wrapper div.right h2 {
+		font-size: 32px;
+	}
+	#contact section.wrapper div.right input[type=text]{
+		width: 46%
+	} 
+	#contact section.wrapper div.right input[type=email] {
+		width: 46%
+	}
+}
+@media all and (max-width:1080px) {
+	#spotlight section.wrapper div.left h1 {
+		font-size: 30px;
+	}
+	#spotlight section.wrapper div.left div.bottom a.button1 {
+		padding: 11px 22px;
+	}
+	#spotlight section.wrapper div.left div.bottom a.button2 {
+		padding: 11px 22px;
+	}
+	#about section.wrapper div.one h1 {
+		font-size: 36px;
+	}
+	#about section.wrapper div.one div.container div.left-1 p {
+		font-size: 16px;
+		height: 60px;
+		width: 60px;
+	}
+	#about section.wrapper div.one div.container div.left p {
+		font-size: 16px;
+		height: 60px;
+		width: 60px;
+	}
+	#about section.wrapper div.one div.container div.right div.top h3 {
+		font-size: 20px;
+		margin-right: 14px;
+	}
+	#about section.wrapper div.one div.container div.right div.top p {
+		font-size: 14px;
+	}
+	#about section.wrapper div.one div.container div.right p {
+		font-size: 14px;
+	}
+	#about section.wrapper div.two h1 {
+		font-size: 36px;
+		font-weight:bolder;
+	}
+	#about section.wrapper div.two div.container div.left-1 p {
+		font-size: 16px;
+		font-weight: 600;
+		height: 60px;
+		width: 60px;
+	}
+	#about section.wrapper div.two div.container div.left p {
+		font-size: 16px;
+		font-weight: 600;
+		height: 60px;
+		width: 60px;
+	}
+	#about section.wrapper div.two div.container div.right div.top h3 {
+		font-size: 20px;
+		margin-right: 16px;
+	}
+	#about section.wrapper div.two div.container div.right div.top p {
+		font-size: 14px;
+	}
+	#about section.wrapper div.two div.container div.right p {
+		font-size: 14px;
+	}
+	#contact section.wrapper div.left iframe {
+		height: 250px;
+	}
+	#contact section.wrapper div.left div.container {
+		height: 136px;
+		padding: 6% 6%;
+	}
+	#contact section.wrapper div.right h2 {
+		font-size: 28px;
+	}
+	#contact section.wrapper div.right input[type=text]{
+		width: 46%
+	} 
+	#contact section.wrapper div.right input[type=email] {
+		width: 46%
+	}
+}
+@media all and (max-width:980px) {
+	header div.right a.button h1 {
+		display: none;
+	}
+	#spotlight section.wrapper {
+		flex-wrap: wrap;
+	}
+	#spotlight section.wrapper div.left {
+		width: 100%;
+	}
+	#spotlight section.wrapper div.left h2 {
+		font-size: 16px;
+	}
+	#spotlight section.wrapper div.left h1 {
+		font-size: 40px;
+	}
+	#spotlight section.wrapper div.right {
+		width: 100%;
+	}
+	#spotlight section.wrapper div.right div.img-container {
+		width: 90%;
+		margin-left: 0;
+		margin-top: 100px;
+	}
+	#media section.wrapper h2 {
+		width: 100%;
+	}
+	#about section.wrapper { 
+		flex-direction: column;	
+	}
+	#about section.wrapper div.one { 
+		width: 100%;
+	}
+	#about section.wrapper div.one h1 { 
+		font-size: 40px;
+		font-weight: bolder;
+	}
+	#about section.wrapper div.one div.container div.left-1 {
+		margin-right: 24px;
+	}
+	#about section.wrapper div.one div.container div.left::before {
+		height: 170px;
+	}
+	#about section.wrapper div.one div.container div.left p { 
+		font-size: 18px;
+		font-weight: 600;
+		border-radius: 40px;
+		height: 80px;
+		width: 80px;
+	}
+	#about section.wrapper div.one div.container div.left-1 p { 
+		font-size: 18px;
+		font-weight: 600;
+		border-radius: 40px;
+		height: 80px;
+		width: 80px;
+	}
+	#about section.wrapper div.one div.container div.right div.top h3 { 
+		font-size: 26px;
+		font-weight: bolder; 
+		margin-right: 24px;
+	}
+	#about section.wrapper div.one div.container div.right div.top p { 
+		font-size: 18px;
+		font-weight: 700;
+	}
+	#about section.wrapper div.one div.container div.right p { 
+		font-size: 18px;
+		line-height: 1.5;
+	}
+	#about section.wrapper div.two { 
+		width: 100%;
+	}
+	#about section.wrapper div.two h1 { 
+		font-size: 40px;
+		font-weight: 800;
+		color: var(--secondary-color);
+		margin-bottom: 40px;
+	}
+	#about section.wrapper div.two { 
+		width: 100%;
+	}
+	#about section.wrapper div.two h1 { 
+		font-size: 40px;
+		font-weight: bolder;
+	}
+	#about section.wrapper div.two div.container div.left-1 {
+		margin-right: 24px;
+	}
+	#about section.wrapper div.two div.container div.left p { 
+		font-size: 18px;
+		font-weight: 600;
+		border-radius: 40px;
+		height: 80px;
+		width: 80px;
+	}
+	#about section.wrapper div.two div.container div.left-1 p { 
+		font-size: 18px;
+		font-weight: 600;
+		border-radius: 40px;
+		height: 80px;
+		width: 80px;
+	}
+	#about section.wrapper div.two div.container div.right div.top h3 { 
+		font-size: 26px;
+		font-weight: bolder; 
+		margin-right: 24px;
+	}
+	#about section.wrapper div.two div.container div.right div.top p { 
+		font-size: 18px;
+		font-weight: 700;
+	}
+	#about section.wrapper div.two div.container div.right p { 
+		font-size: 18px;
+		line-height: 1.5;
+	}
+	#contact section.wrapper {
+		flex-wrap: wrap;
+	}
+	#contact section.wrapper div.left {
+		width: 100%;
+		margin-bottom: 24px;
+	}
+	#contact section.wrapper div.left iframe {
+		width: 100%;
+		height: 300px;
+	}
+	#contact section.wrapper div.left div.container {
+		width: 100%;
+		height: 160px;
+	}
+	#contact section.wrapper div.right {
+		width: 100%;
+	}
+	#contact section.wrapper div.right h2 {
+		font-size: 36px;
+		font-weight: bolder;
+	}
+	#contact section.wrapper div.right input[type=text] {
+		padding: 16px 24px;
+		font-size: 16px;
+		width: 100%;
+		font-weight: bolder;
+		margin-bottom: 24px;
+		color: var(--text-color);
+	}
+	#contact section.wrapper div.right input[type=email] {
+		padding: 16px 24px;
+		font-size: 16px;
+		width: 100%;
+		font-weight: bolder;
+		margin-bottom: 24px;
+		color: var(--text-color);
+	}
+	#contact section.wrapper div.right textarea {
+		padding: 16px 24px;
+		font-size: 16px;
+		width: 100%;
+		font-weight: bolder;
+		margin-bottom: 24px;
+		color: var(--text-color);
+		margin-top: 0;
+	} 
+	#contact section.wrapper div.right input[type=submit] {
+		width: 100%;
+	}
+} 
+@media all and (max-width:768px) {
+	#media section.wrapper h2 {
+		font-size: 34px;
+	}
+	#contact section.wrapper div.left iframe {
+		height: 240px;
+	}
+	#contact section.wrapper div.right h2 {
+		font-size: 30px;
+	}
+	#about section.wrapper div.one div.container div.right p {
+		font-size: 16px;
+	}
+	#about section.wrapper div.two div.container div.left::before {
+		bottom: 90%;
+	}
+	#about section.wrapper div.two div.container div.right p {
+		font-size: 16px;
+	}
+	#contact section.wrapper div.right input[type=text] {
+		padding: 12px 24px;
+	}
+	#contact section.wrapper div.right input[type=email] {
+		padding: 12px 24px;
+	}
+	#contact section.wrapper div.right textarea {
+		padding: 12px 24px;
+	}
+}
+@media all and (max-width:640px) {
+	header nav.middle {
+		display: none;
+	}
+	header div.right a.menu-icon{
+		display: block;
+		color: var(--secondary-color);
+		font-size: 40 px;
+	}
+	header div.right {
+		display: flex;
+		align-items: center;
+		position: relative;
+	}
+	header div.right a.button {
+		font-size: 25px;
+		margin-right: 10px;
+	}
+	header div.right  a.menu-icon.active {
+		display: none;
+	}
+	header div.right div.content nav.mobile-menu.active {
+		display: block;
+		font-size: 20px;
+		right: 188px;
+		position: absolute;
+		top: 106%;
+		z-index: 0;
+	}
+	header div.right div.content nav.mobile-menu ul li a {
+		color:var(--secondary-color);
+		font-size: 16px;
+	}
+	header div.right span.close i.bx-plus {
+		font-size: 40px;
+	}
+	header div.right span.close.active {
+		display: block;
+		font-size: 40px;
+		position: absolute;
+		top: 93%;
+		right: 10%;
+	}
+	header div.right div.content {
+		display: block;
+		position: absolute;
+		left: 100%;
+		top: 72px;
+		transform: translateY(-100%);
+		transition: .5s ease-in-out;
+	
+	}
+	#spotlight.active {
+		transform: translateY(100px);
+		transition: .5s ease-in-out;
+	}
+	
+	#spotlight section.wrapper div.left h1 {
+		font-size: 32px;
+	}
+	#spotlight section.wrapper div.left div.bottom {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	#spotlight section.wrapper div.left div.bottom a.button1 {
+		margin-bottom: 20px;
+		width: 100%;
+		text-align: center;
+		padding: 12px 24px;
+	}
+	#spotlight section.wrapper div.left div.bottom a.button2 {
+		width: 100%;
+		text-align: center;
+		padding: 12px 24px;
+	}
+	#media section.wrapper h2 {
+		font-size: 26px;
+	}
+	#media section.wrapper div.container a i {
+		display: none;
+	}
+	#media section.wrapper div.container div.slide-container {
+		width: 100%;
+	}
+	#about section.wrapper div.one h1 {
+		font-size: 36px;
+	}
+	#about section.wrapper div.one div.container div.right div.top {
+		flex-wrap: wrap;
+	}
+	#about section.wrapper div.one div.container div.right div.top h3 {
+		width: 100%;
+		margin-bottom: 6px;
+	}
+	#about section.wrapper div.one div.container div.right p {
+		font-size: 16px;
+	}
+	#about section.wrapper div.two h1 {
+		font-size: 36px;
+	}
+	#about section.wrapper div.two div.container div.right div.top {
+		flex-wrap: wrap;
+	}
+	#about section.wrapper div.two div.container div.right div.top h3 {
+		width: 100%;
+		margin-bottom: 6px;
+	}
+	#about section.wrapper div.two div.container div.right p {
+		font-size: 16px;
+	}
+	#about section.wrapper div.two div.container div.right div.top p {
+		font-size: 16px;
+	}
+	#about section.wrapper div.two div.container div.left::before {
+		height: 173px;
+	}
+	#contact section.wrapper div.right h2 {
+		font-size: 26px;
+	}
+}
+@media all and (max-width:480px) {
+	header div.left a i {
+		font-size: 36px;
+	}
+	header div.left a h1 {
+		font-size: 18px;
+	}
+	#spotlight section.wrapper div.heading {
+		height: 100px;
+	}
+	#spotlight section.wrapper div.left h1 {
+		font-size: 36px;
+	}
+	#spotlight section.wrapper div.left h1 span {
+		display: block;
+	}
+	#media section.wrapper h2 {
+		font-size: 24px;
+	}
+	#about section.wrapper div.one h1 {
+		font-size: 30px;
+	}
+	#about section.wrapper div.one div.container div.left-1 p {
+		font-size: 16px;
+		height: 70px;
+		width: 70px;
+	}
+	#about section.wrapper div.one div.container div.left p {
+		font-size: 16px;
+		height: 70px;
+		width: 70px;
+	}
+	#about section.wrapper div.one div.container div.right div.top h3 {
+		font-size: 24px;
+	}
+	#about section.wrapper div.one div.container div.right div.top p {
+		font-size: 14px;
+	}
+	#about section.wrapper div.one div.container div.right p {
+		font-size: 14px;
+	}
+	#about section.wrapper div.two h1 {
+		font-size: 30px;
+	}
+	#about section.wrapper div.two div.container div.left-1 p {
+		font-size: 16px;
+		height: 70px;
+		width: 70px;
+	}
+	#about section.wrapper div.two div.container div.left p {
+		font-size: 16px;
+		height: 70px;
+		width: 70px;
+	}
+	#about section.wrapper div.two div.container div.right div.top h3 {
+		font-size: 24px;
+	}
+	#about section.wrapper div.two div.container div.right div.top p {
+		font-size: 14px;
+	}
+	#about section.wrapper div.two div.container div.right p {
+		font-size: 14px;
+	}
+	#contact section.wrapper div.left div.container {
+		height: 130px;
+	}
+	#contact section.wrapper div.right input[type=text] {
+		padding: 10px 20px;
+		font-size: 14px;
+	}
+	#contact section.wrapper div.right input[type=email] {
+		padding: 10px 20px;
+		font-size: 14px;
+	}
+	#contact section.wrapper div.right textarea {
+		padding: 10px 20px;
+		font-size: 14px;
+	}
+	#contact section.wrapper div.right h2 {
+		font-size: 23px;
+	}
+} 
+@media all and (max-width:360px) {
+	#spotlight section.wrapper div.left h2 {
+		font-size: 14px;
+		padding: 24px 46px;
+		text-align: center;
+	}
+	#spotlight section.wrapper div.left h1 {
+		text-align: center;
+	}
+	#spotlight section.wrapper div.left h1 span {
+		text-align: center;
+	}
+	#spotlight section.wrapper div.left p {
+		text-align: center;
+	}
+	#about section.wrapper div.one div.container div.right div.top h3 {
+		font-size: 22px;
+		margin-right: 0;
+	}
+	#about section.wrapper div.two div.container div.right div.top h3 {
+		font-size: 22px;
+		margin-right: 0;
+	}
+	#about section.wrapper div.one div.container div.left::before {
+		height: 180px;
+	}
+	#contact section.wrapper div.left div.container {
+		flex-wrap: wrap;
+		height: 190px;
+	}
+	#contact section.wrapper div.left div.container div.top {
+		width: 100%;
+		margin-bottom: 24px;
+		text-align: center;
+
+	}
+	#contact section.wrapper div.left div.container div.bottom {
+		width: 100%;
+		display: flex;
+		justify-content: space-around;
+	}
+	#contact section.wrapper div.right h2 {
+		font-size: 30px;
+	}
+
+}
