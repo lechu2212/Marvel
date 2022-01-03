@@ -184,7 +184,11 @@ header div.right div.content {
 	transition: .5s ease-in-out;
 }
 header div.right div.content nav.mobile-menu {
-	display: none;
+	position: fixed;
+	top: 50px;
+	right: -280px;
+	z-index: 2;
+	transition: all 0.5s ease-in-out;
 }
 header div.right span.close {
 	display: none;
@@ -328,15 +332,42 @@ header div.right span.close i.bx-plus {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	position: relative;
 }
 #media section.wrapper div.container div.slide-container { 
 	width: 80%;
+	margin:0 auto;
 }
 
 #media section.wrapper div.container div.slide-container img { 
 	display: block;
 	width: 100%;
 }
+div.container .owl-theme .owl-nav i {
+	font-size: 70px;
+	color: var(--secondary-color);
+}
+.owl-theme .owl-nav .owl-prev i {
+	position: absolute;
+	top: 50%;
+	left: 0;
+}
+.owl-theme .owl-nav .owl-prev span {
+	font-size: 80px;
+}
+.owl-theme .owl-nav .owl-next {
+	position: absolute;
+	top: 50%;
+	right: 0;
+}
+.owl-theme .owl-nav .owl-next span {
+	font-size: 80px;
+}
+div.container .owl-theme .owl-nav i:hover {
+	background-color: var(--primary-color);
+	color: var(--btn-color);
+}
+
 #media section.wrapper div.container a i { 
 	cursor: pointer;
 	font-size: 70px;
@@ -1068,7 +1099,7 @@ footer section.wrapper p a:hover {
 	header div.right div.content nav.mobile-menu.active {
 		display: block;
 		font-size: 20px;
-		right: 188px;
+		right: 250px;
 		position: absolute;
 		top: 106%;
 		z-index: 0;
@@ -1171,6 +1202,9 @@ footer section.wrapper p a:hover {
 	header div.left a h1 {
 		font-size: 18px;
 	}
+	header div.right div.content nav.mobile-menu.active {
+		right: 200px;
+	}
 	#spotlight section.wrapper div.heading {
 		height: 100px;
 	}
@@ -1247,6 +1281,9 @@ footer section.wrapper p a:hover {
 	}
 } 
 @media all and (max-width:360px) {
+	header div.right div.content nav.mobile-menu.active {
+		right: 140px;
+	}
 	#spotlight section.wrapper div.left h2 {
 		font-size: 14px;
 		padding: 24px 46px;

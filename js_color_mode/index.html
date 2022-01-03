@@ -5,6 +5,8 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/owl.carousel.min.css" />
+        <link rel="stylesheet" href="css/owl.theme.default.min.css" />
         <link rel="stylesheet" href="./fonts/boxicons-2.0.9/css/boxicons.css" />
         <title>Marvel</title>
     </head>
@@ -78,23 +80,38 @@
             <section class="wrapper">
                 <h2>Things I have designed for digital media agencies</h2>
                 <div class="container">
-                    <a href="#" class="prev" onclick="">
+                    <!-- <a href="#" class="prev" onclick="">
                         <i class='bx bx-left-arrow-alt'></i>
-                    </a>
-                    <div class="slide-container">
-                        <img src="images/project-image01.png" alt="Image1" />
+                    </a> -->
+                    <div class="owl-carousel owl-theme">
+                        <div class="slide-container">
+                            <img src="images/project-image01.png" alt="Image1" />
+                        </div>
+                        <div class="slide-container">
+                            <img src="images/project-image02.png" alt="Image02" />
+                        </div>
+                        <div class="slide-container">
+                            <img src="images/project-image03.png" alt="Image3" />
+                        </div>
+                        <div class="slide-container">
+                            <img src="images/project-image04.png" alt="Image4" />
+                        </div>
+                        <div class="slide-container">
+                            <img src="images/project-image05.png" alt="Image5" />
+                        </div>
                     </div>
-                    <a href="#" class="next" onclick="">
+                    
+                    <!-- <a href="#" class="next" onclick="">
                         <i class='bx bx-right-arrow-alt' ></i>
-                    </a>
+                    </a> -->
                 </div>
-                <div class="dots">
+                <!-- <div class="dots">
                     <i class='bx bxs-circle'></i>
                     <i class='bx bxs-circle'></i>
                     <i class='bx bxs-circle'></i>
                     <i class='bx bxs-circle'></i>
                     <i class='bx bxs-circle'></i>
-                </div>
+                </div> -->
             </section><!-- (#media > .wrapper) -->
         </section><!-- (#media) -->
         <section id="about">
@@ -235,6 +252,9 @@
                 <p>Designed by <a href="#">Tooplate</a></p>
             </section><!-- (footer > .wrapper) -->
         </footer><!-- (footer) -->
+        <script src="./js/jquery-3.6.0.min.js"></script>
+        <script src="./js/owl.carousel.min.js"></script>
+        <script src="./js/app.js"></script>
         <script src="./js/script.js"></script>
     </body>
 </html>
